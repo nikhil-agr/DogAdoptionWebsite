@@ -1,15 +1,24 @@
-'use client'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Marquee from '../Marquee'
-import gsap from 'gsap'
 import LocomotiveScroll from 'locomotive-scroll'
-const page2 = () => {
-  const loco = new LocomotiveScroll();
+
+const Page2 = () => {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      const loco = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true
+      });
+    }
+  }, []);
+
   return (
-    <div className='h-screen bg-red-600 rounded-t-3xl py-20'>
-      <Marquee>&nbsp;Do not Shop But Adopt&nbsp;</Marquee>
+    <div ref={scrollRef} className='h-screen bg-red-600 rounded-t-3xl py-20'>
+      <Marquee> Do not Shop But Adopt </Marquee>
     </div>
   )
 }
 
-export default page2
+export default Page2
