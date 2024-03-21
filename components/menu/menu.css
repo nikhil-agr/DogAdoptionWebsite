@@ -15,8 +15,8 @@
 
 .menu-bar a,
 .menu-open p {
-  color: #212121;
-  cursor: pointer;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .menu-close {
@@ -25,16 +25,16 @@
 }
 
 .menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 2em;
-  background: #FFE569;
-  z-index: 2;
-  display: flex;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 2em;
+    background: #c5fb45;
+    z-index: 1;
+    display: flex;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 }
 
 .menu-close-icon {
@@ -57,6 +57,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+.menu-preview video {
+    width: 27%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50px;
 }
 
 .menu-close-icon p {
