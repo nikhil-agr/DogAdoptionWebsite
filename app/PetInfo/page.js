@@ -1,13 +1,26 @@
-import React from "react";
+'use client';
+import { useEffect } from 'react';
+import styles from './page.module.css'
+import Intro from '../../components/Intro';
+import Description from '../../components/Description';
+import Projects from '../../components/Projects';
 
-const page = () => {
+export default function Home() {
+
+  useEffect(() => {
+    (
+      async () => {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default
+        const locomotiveScroll = new LocomotiveScroll();
+      }
+    )()
+  }, [])
+
   return (
-    <div className="page-content">
-      <h1>
-        Pet Info<sup>03</sup>
-      </h1>
-    </div>
-  );
-};
-
-export default page;
+    <main className={styles.main}>
+      <Intro />
+      <Description />
+      <Projects />
+    </main>
+  )
+}

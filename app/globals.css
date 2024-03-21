@@ -1,3 +1,18 @@
+@import '../node_modules/locomotive-scroll/dist/locomotive-scroll';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import 'node_modules/locomotive-scroll/dist/locomotive-scroll'; */
+
+
+body{
+  margin: 0px;
+  background-color: black;
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -5,12 +20,7 @@
     -webkit-font-smoothing: antialiased;
 }
 
-body {
-    background: #000;
-}
-
-a,
-p {
+.menu-logo,.menu-close,.menu-open,.menu-info p,a {
     color: #000;
     text-decoration: none;
     text-transform: uppercase;
@@ -27,7 +37,11 @@ p {
     position: relative;
 }
 
-button {
+.outer-bg {
+    background: #000;
+}
+
+.hero button {
     font-size: 20px;
     display: flex;
     flex-direction: row;
@@ -44,9 +58,10 @@ button {
     border: none;
 }
 
-button svg{
+.hero svg {
     width: 30px;
 }
+
 .bg {
     position: absolute;
     height: 100vh;
@@ -57,7 +72,7 @@ button svg{
     backdrop-filter: blur(50px);
 }
 
-h1 {
+.hero h1 {
     position: absolute;
     top: 60%;
     left: 50%;

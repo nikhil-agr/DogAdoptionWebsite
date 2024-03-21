@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from 'react'
 
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import Image from 'next/image'
 
 const menuLinks = [
     { path: "/", label: "Home" },
@@ -48,7 +47,7 @@ const Menu = () => {
     );
     const [isClient, setIsClient] = useState(false);
 
-    
+
     useEffect(() => {
         setIsClient(true);
         if (isMenuopen) {
@@ -105,10 +104,10 @@ const Menu = () => {
                     </div>
                 </div>
                 {isClient && (
-                <div className="menu-preview">
-                    <video src="/dog.mp4" autoPlay loop muted></video>
-                </div>
-            )}
+                    <div className="menu-preview">
+                        <video src="/dog.mp4" autoPlay loop muted></video>
+                    </div>
+                )}
             </div>
         </div>
     )
